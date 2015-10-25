@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>514</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FTP客户端</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget:focus{outline: none;}
+.QWidget{background-color:rgba(255,255,255,200);}
+QWidget:focus{outline: none;}/*remove all  QWidget's focus border*/
+/*文本框样式*/
+QTimeEdit,QDoubleSpinBox,QSpinBox,QLineEdit{background:white;border:1px groove lightgray; border-radius:2px}
+/*QLineEdit:focus{background:white;border:1px groove lightgray; border-radius:2px}*/
+
+/*定义所有按钮的样式*/
+QPushButton{
+	background-color:#2dabf9;
+	border-radius:2px;
+	border-color:#2dabf9;
+	font-size:12px;
+	color:#ffffff;
+	padding: 6px 15px;
+}
+
+QPushButton:pressed{
+	background-color:#0061a7;
+	border-color:#0061a7;
+}
+
+QPushButton::disabled{
+	background-color:#B8B8B8;
+}
+/*进度条样式*/
+QProgressBar{
+	border: 1px solid lightgray;
+	border-radius:1px;
+	text-align:center;
+	height:20px;
+}
+
+QProgressBar::chunk{
+	background-color: #2dabf9;
+	width: 12px;
+	/*margin:0.5px;*/
+}
+
+/*tablewidget 样式*/
+QTreeView,QTableView , QTableWidget{
+	selection-background-color:#44c767;
+	background-color:white;
+	border:1px solid #E0DDDC;
+	gridline-color:lightgray;
+}
+/*表头样式*/
+QHeaderView::section{
+	background-color:white;
+	border:0px solid #E0DDDC;
+	border-bottom:1px solid #00cc00;
+	border-right:1px solid #E0DDDC;
+	height:20px;
+	/*color: #E0DDDC;*/
+} 
+/*水平滚动条样式*/
+
+QScrollBar:horizontal
+{
+	
+	height:14px;
+	border:0px solid #eee9e9;
+	margin:0px;
+	padding-left:10px;
+	padding-right:10px;
+}
+/*滚动手柄样式*/
+QScrollBar::handle:horizontal
+{
+	height:14px;
+	border-radius:6px;
+	background:#C4C4C4;
+	border:1px solid #C4C4C4;
+}
+
+/*上翻页，下翻页按钮样式*/
+QScrollBar::add-line:horizontal
+{
+	width:30px;
+	background:#C4C4C4;
+	subcontrol-position:right;
+}
+QScrollBar::sub-line:horizontal
+{
+	width:30px;
+	background:#C4C4C4;
+	subcontrol-position:left;
+}
+
+/*左右空白滚动条出颜色*/
+QScrollBar::add-page:horizontal
+{
+	background:#EAEAEA;
+}
+
+QScrollBar::sub-page:horizontal
+{
+	background:#EAEAEA;
+}
+
+
+QScrollBar::up-arrow:horizontal
+{
+	height:30px;
+	min-width:50px;
+}
+QScrollBar::down-arrow:horizontal
+{
+	height:30px;
+	min-width:50px;
+}
+
+
+/*垂直滚动条样式-BEGIN*/
+QScrollBar:vertical
+{
+	width:14px;
+	border:0px solid #eee9e9;
+	margin:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+QScrollBar::handle:vertical
+{
+	width:14px;
+	border-radius:6px;
+	background:#C4C4C4;
+	border:1px solid #C4C4C4;
+}
+
+QScrollBar::add-line:vertical
+{
+	height:10px;
+	background:#C4C4C4;
+	subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical
+{
+	height:10px;
+	background:#C4C4C4;
+	subcontrol-position:top;
+}
+QScrollBar::add-page:vertical
+{
+	background:#EAEAEA;
+}
+
+QScrollBar::sub-page:vertical
+{
+	background:#EAEAEA;
+}
+QScrollBar::up-arrow:vertical
+{
+	max-height:16px;
+	min-width:17px;
+}
+QScrollBar::down-arrow:vertical
+{
+	/*border-style:outset;*/
+}
+/*垂直滚动条样式-END*/</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>IP地址：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ftpServerLineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>请输入FTP服务器IP地址</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="connectButton">
+            <property name="text">
+             <string>连接</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="fileList">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <column>
+         <property name="text">
+          <string>文件</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>大小</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>修改日期</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>拥有者</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>所属组</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="cdToParentButton">
+          <property name="text">
+           <string>返回上级</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>FTP客户端</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="downloadButton">
+          <property name="text">
+           <string>下载</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTreeView" name="treeView">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="uploadButton">
+          <property name="text">
+           <string>上传</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
