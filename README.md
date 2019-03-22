@@ -1,6 +1,6 @@
 # Ftp-Client (FTP客户端)
 ### 简介：
-This is a Ftp Client written in Qt
+This is a Ftp Client written in Qt 
 这是一个ftp client，是用Qt和C++写成了，主要用到了QFtp这个类，客户端功能很简单，下面有介绍.
 
 ### 功能：
