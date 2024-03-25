@@ -14,6 +14,4 @@ File Batch Upload and Download: The client supports batch upload and download of
 Folder Operations: The client supports right-click creation of folders and batch deletion of files.
 
 ### Preview
- <div style=width: 60%; height: auto; margin: 0 auto;">
-  <img src="./ftp-preview.png" width="100%" height="auto" style="display: block;">
- </div>
+<img src="./ftp-preview.png" width="60%" height="auto" style="display: block;">
