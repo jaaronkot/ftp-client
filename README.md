@@ -12,6 +12,8 @@ Connecting to Server Port: The default port for connecting to the server is 8021
 File Batch Upload and Download: The client supports batch upload and download of files within the same folder.
 
 Folder Operations: The client supports right-click creation of folders and batch deletion of files.
-### Preview
 
- <img src="./preview.png" width="500px"> 
+### Preview
+ <div style=width: 60%; height: auto; margin: 0 auto;">
+  <img src="./ftp-preview.png" width="100%" height="auto" style="display: block;">
+ </div>
