@@ -1,4 +1,5 @@
 # Ftp Client
+[简体中文](README_CN.md)
 ## Introduction:
 
 This is an FTP client written in Qt and C++. It utilizes the QFtp class for its functionality. The client is simple in nature and the following features are described below.
